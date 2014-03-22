@@ -9,13 +9,13 @@ I [work on a lot of repositories](https://github.com/jeremyf) over the course of
 The vast majority of them are Ruby repositories.
 
 As a matter of convention, all of my repositories are in `\textasciitilde/Repositories/`.
-This convention, along with my `project` command means that from anywhere on my terminal, I can type the following.
+This convention and my `project` command means I can quickly access any project in the terminal.
 
-`$ project hydra`
-
-If I hit `tab` then I get a list for autocompletion.
+If I type `$ project hydra`, then hit `tab` I get an tab completion list of matching directories in the `\textasciitilde/Repositories/` directory.
 
 ```console
+$ project hydra
+
 hydra                        hydra-collections            hydra-jetty
 hydra-account_manager        hydra-derivatives            hydra-jetty-cookbook
 hydra-camp                   hydra-ezid                   hydra-migrate
@@ -24,8 +24,8 @@ hydra-remote_identifier      hydramata                    hydra-capybara-walkthr
 hydra-head                   hydra-object_viewer          hydramaton
 ```
 
-If I hit `enter` for `$ project hydra` then I basically my text editor to that directory.
-In reality, I create a Sublime project for that directory and then open that project.
+If I type `$ project hydra`, then hit `enter` my text editor opens that directory.
+In reality, I create a Sublime project for that directory and then open that project; but to many it might look like I'm just opening the project.
 
 Below are the three scripts that are necessary for the above behavior.
 
