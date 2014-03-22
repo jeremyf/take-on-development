@@ -1,0 +1,36 @@
+\documentclass[14pt]{extbook} % Edit this line to change the documentclass.
+% Add custom preamble content below.
+% Example commands for using the Polyglossia package with French are
+% included for reference.
+% You may also have to edit config/lang.yml to sync up the HTML/EPUB/MOBI.
+% \usepackage{polyglossia}
+% \setdefaultlanguage{french}
+% \DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
+
+\usepackage{latex_styles/softcover}
+\VerbatimFootnotes % Allows verbatim text in footnotes
+\title{Take on Rails}
+
+\author{Jeremy Friesen}
+\date{}
+
+\begin{document}
+
+\includepdf{images/cover.pdf}
+\frontmatter
+\maketitle
+\tableofcontents
+\include{generated_polytex/preface}
+\mainmatter
+\include{generated_polytex/command_line}
+\include{generated_polytex/git}
+\include{generated_polytex/ruby}
+\include{generated_polytex/rubygems}
+\include{generated_polytex/bundler}
+\include{generated_polytex/rake}
+\include{generated_polytex/rails}
+\include{generated_polytex/testing}
+\include{generated_polytex/rspec}
+\include{generated_polytex/cucumber}
+\include{generated_polytex/miscellany}
+\end{document}

@@ -4,6 +4,14 @@ maketitle
 tableofcontents
 preface.md
 mainmatter:
-a_chapter.md
-another_chapter.md
-yet_another_chapter.md
+command_line.md
+git.md
+ruby.md
+rubygems.md
+bundler.md
+rake.md
+rails.md
+testing.md
+rspec.md
+cucumber.md
+miscellany.md
