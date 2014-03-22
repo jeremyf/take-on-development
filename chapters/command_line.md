@@ -3,6 +3,8 @@
 
 ## Bash Completion
 
+## Brew
+
 ## My `project` command
 
 I [work on a lot of repositories](https://github.com/jeremyf) over the course of a week.

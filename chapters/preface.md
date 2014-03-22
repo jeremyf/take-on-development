@@ -9,3 +9,8 @@ And now I find myself working on a team that is comprised of people at my univer
 This collaboration has been very revelatory.
 I have habits that are hard to break; I struggle to be a team player.
 But I also have a tremendous number of heuristics for troubleshooting and getting started from the most basic instructions.
+
+So inside this book you will find how I go about doing things.
+Are these the best ways to be doing things?
+Maybe, maybe not.
+But it is my take on developing in the open.
