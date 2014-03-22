@@ -11,7 +11,7 @@ The vast majority of them are Ruby repositories.
 As a matter of convention, all of my repositories are in `\textasciitilde/Repositories/`.
 This convention and my `project` command means I can quickly access any project in the terminal.
 
-If I type `$ project hydra`, then hit `tab` I get an tab completion list of matching directories in the `\textasciitilde/Repositories/` directory.
+On the command line, if I type `project hydra`, then hit `tab` I get an tab completion list of matching directories in the `\textasciitilde/Repositories/` directory.
 
 ```console
 $ project hydra
@@ -24,7 +24,7 @@ hydra-remote_identifier      hydramata                    hydra-capybara-walkthr
 hydra-head                   hydra-object_viewer          hydramaton
 ```
 
-If I type `$ project hydra`, then hit `enter` my text editor opens that directory.
+Or, if I type `project hydra`, then hit `enter` my text editor opens that directory.
 In reality, I create a Sublime project for that directory and then open that project; but to many it might look like I'm just opening the project.
 
 Below are the three scripts that are necessary for the above behavior.
