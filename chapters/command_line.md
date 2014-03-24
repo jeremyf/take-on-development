@@ -1,9 +1,29 @@
 # Command Line
 \label{cha:command_line}
 
-## Bash Completion
+As an open source developer, I spend a fair amount of time on the command line.
+I am by no means an expert, but there are tweaks that I've made to my development system that I find very helpful.
 
-## Brew
+## My `dotfiles` project
+
+The configuration files of my `$HOME` directory are as important as any code I write.
+It is both the tools and toolbox that I carry with me to do my job.
+
+After reviewing various [dotfile project's at dotfiles.github.io](https://dotfiles.github.io), [I forked](https://github.com/jeremyf/dotfiles/) [@holman](http://twitter.com/holman)'s [dotfile project](https://github.com/holman/dotfiles/). This meant switching the project from `zsh` to `bash`.
+
+## My `\textasciitilde/.inputrc`
+
+First I make sure that my command line navigation is up to snuff.
+I export a custom [INPUTRC](http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html) in my `\textasciitilde/.profile`.
+
+```sh
+if [ -f $HOME/.inputrc ]; then
+  export INPUTRC="$HOME/.inputrc"
+fi
+```
+
+<<(/Users/jfriesen/.inputrc, lang: sh)
+
 
 ## My `project` command
 
@@ -31,22 +51,13 @@ In reality, I create a Sublime project for that directory and then open that pro
 
 Below are the three scripts that are necessary for the above behavior.
 
+
 ### Code Sample for `project`
 
-In `\textasciitilde/bin/project`
+In `\textasciitilde/Repositories/dotfiles/bin/project`
 
-<<(/Users/jfriesen/bin/project, lang: ruby)
+<<(/Users/jfriesen/Repositories/dotfiles/bin/project, lang: ruby)
 
-In `\textasciitilde/.profile`
+In `\textasciitilde/Repositories/dotfiles/project/completion.bash`
 
-```sh
-  if [ -d ~/bin ]; then
-    echo "$PATH" | grep -q "$HOME/bin:" || export PATH="$HOME/bin:$PATH"
-  fi
-
-  if [ -f ~/bin/bash_completion.d/project ]; then source ~/bin/bash_completion.d/project; fi
-```
-
-In `\textasciitilde/bin/bash_completion.d/project`
-
-<<(/Users/jfriesen/bin/bash_completion.d/project, lang: sh)
+<<(/Users/jfriesen/Repositories/dotfiles/project/completion.bash, lang: sh)
