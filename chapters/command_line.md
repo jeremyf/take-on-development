@@ -4,7 +4,7 @@
 As an open source developer, I spend a fair amount of time on the command line.
 I am by no means an expert, but there are tweaks that I've made to my development system that I find very helpful.
 
-## My `dotfiles` project
+## [My `dotfiles` repository](https://github.com/jeremyf/dotfiles/)
 
 The configuration files of my `$HOME` directory are as important as any code I write.
 It is both the tools and toolbox that I carry with me to do my job.
@@ -14,7 +14,11 @@ After reviewing various [dotfile project's at dotfiles.github.io](https://dotfil
 ## My `\textasciitilde/.inputrc`
 
 First I make sure that my command line navigation is up to snuff.
-I export a custom [INPUTRC](http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html) in my `\textasciitilde/.profile`.
+I export the following custom [INPUTRC](http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html).
+
+<<(/Users/jfriesen/.inputrc, lang: sh)
+
+This can be done manually in `\textasciitilde/.profile` by adding the following lines.
 
 ```sh
 if [ -f $HOME/.inputrc ]; then
@@ -22,8 +26,7 @@ if [ -f $HOME/.inputrc ]; then
 fi
 ```
 
-<<(/Users/jfriesen/.inputrc, lang: sh)
-
+*The dotfiles project automatically handles this as part of its `script/bootstrap`.*
 
 ## My `project` command
 
