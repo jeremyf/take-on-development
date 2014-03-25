@@ -89,7 +89,7 @@ includes the current branch and repository status information.
 2.0.0-p353
 ```
 
-Display the current Ruby version.
+Display the current Ruby version. *This was particularly helpful a few years ago when I had a mix of 1.8.x projects and 1.9.x projects.*
 
 \begin{aside}
 \heading{My PS1 Script}
