@@ -6,8 +6,8 @@ At first it was the change to a tool that allowed fast branching and merging - a
 Now it is the collaborative nature of the tool.
 
 \begin{aside}
-\heading{I Merged Branches in SVN Once. Once!}
 \label{aside:merged_in_svn_once}
+\heading{I Merged Branches in SVN Once. Once.}
 
 Back in the early days of my Rails projects, I was working on a project managed in SVN.
 I was working on an extended feature and decided to create a branch.
@@ -91,18 +91,18 @@ includes the current branch and repository status information.
 Display the current Ruby version. *This was particularly helpful a few years ago when I had a mix of 1.8.x projects and 1.9.x projects.*
 
 \begin{aside}
-\heading{My PS1 Script}
-\label{aside:custom_ps1_with_git}
+\label{aside:custom_ps_with_git}
+\heading{About My PS1}
 
-This is a recent change to my PS1 script.
+Below is a recent change to my PS1 script.
 I had different information, but I opted to instead use a community maintained set of scripts.
 
 Working on lots of projects in various Ruby versions, I find this PS1 information vital.
 In fact, when I look at other people's PS1 and don't see git information, I am left wondering how they have room in their head to keep track of that information.
 
-<<(/Users/jfriesen/Repositories/dotfiles/system/ps1.bash, lang: sh)
-
 \end{aside}
+
+<<(/Users/jfriesen/Repositories/dotfiles/system/ps1.bash, lang: sh)
 
 ## Branching
 
