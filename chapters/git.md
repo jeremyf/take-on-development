@@ -107,3 +107,63 @@ In fact, when I look at other people's PS1 and don't see git information, I am l
 ## Branching
 
 ## Bisect
+
+From `git-bisect`'s [man page](https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html).
+
+> git-bisect – Find by binary search the change that introduced a bug
+
+*This is updated from a [previous blog post](http://blogs.nd.edu/jeremyfriesen/2012/10/08/using-git-bisect-for-finding-when-a-bug-was-introduced/).*
+
+### Prepare Your Bisect
+
+```console
+$ git bisect start
+$ git bisect bad
+$ git bisect good 3f5ee0d32dd2a13c9274655de825d31c6a12313f
+```
+
+* Tell git we are starting a bisect.
+* Then tell git at what point we found the bug - in this case HEAD.
+* And finally tell git at what point we were bug free – in this case at commit 3f5ee0d32dd2a13c9274655de825d31c6a12313f.
+
+### Run Your Test
+
+We’ve told git-bisect the good and bad commits.
+
+```console
+$ git bisect run ./path/to/test-script
+```
+
+And now we step through history and run `./path/to/test-script`.
+
+What is `./path/to/test-script`?
+It is any executable file that exits with a 0 status (i.e. success) or a non-0 status (i.e. failure).
+[Learn more about git-bisect run](https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html#_bisect_run).
+
+If `./path/to/test-script` is successful, the current commit is good.
+Otherwise it is bad.
+Git-bisect will converge on the commit that introduced the bad result and report the bad commit log entry.
+
+### Script Use Cases
+
+What is this `./path/to/test-script`?
+
+I’ve used `rake` for my Rails project.
+But that was overkill - my `rake` test suite was very slow.
+
+I’ve also ran bisect on a test file in the repository (i.e. `ruby ./test/unit/page_test.rb`).
+In these cases the test was in my the repository.
+This meant the test was subject to changes over the commit time range.
+
+I have found using a script not in the repository to be the best option.
+I can answer the very specific question by using a custom script.
+
+This was useful when my manager asked “When did this strange behavior get introduced?”
+
+I wrote a Capybara test that automated the steps my manager reported.
+Reproducing the error and creating an assertion of the expected behavior.
+
+A few weeks prior, I had introduced the odd behavior as a side-effect.
+At the time I didn’t have test coverage for that particular behavior.
+
+I patched the error, answered my managers question, and had an automated test that I could drop into my repository to make sure I didn’t reintroduce that behavior.
