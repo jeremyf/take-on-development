@@ -23,8 +23,8 @@ And I don't think we got things right.
 That day we decided we needed to move to git.
 
 Did I mention we didn't have automated tests?
-\end{aside}
 
+\end{aside}
 
 ## Bash Completion
 
@@ -101,6 +101,7 @@ Working on lots of projects in various Ruby versions, I find this PS1 informatio
 In fact, when I look at other people's PS1 and don't see git information, I am left wondering how they have room in their head to keep track of that information.
 
 <<(/Users/jfriesen/Repositories/dotfiles/system/ps1.bash, lang: sh)
+
 \end{aside}
 
 ## Branching
