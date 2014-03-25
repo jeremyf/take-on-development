@@ -183,3 +183,9 @@ A few weeks prior, I had introduced the odd behavior as a side-effect.
 At the time I didn’t have test coverage for that particular behavior.
 
 I patched the error, answered my managers question, and had an automated test that I could drop into my repository to make sure I didn’t reintroduce that behavior.
+
+## Git Immersion
+
+@TODO - go through gitimmersion to speak authoritively
+
+> "Git immersion is a guided tour that walks through the fundamentals of git, inspired by the premise that to know a thing is to do it." - *[gitimmersion.com](http://gitimmersion.com/)*
