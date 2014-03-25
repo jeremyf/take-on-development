@@ -49,7 +49,7 @@ $ git checkout --<tab>
 --patch      --quiet      --theirs     --track
 ```
 
-In your `\textasciitilde/.profile` add the following. *Or make use of my dotfiles repository~\ref{sec:my_dotfiles_repository}*.
+In your `\textasciitilde/.profile` add the following. *Or make use of my dotfiles repository~\ref{sec:my_dotfiles_repository}.*
 
 ```console
 if [ -f /path/to/your/git-completion.bash ]; then
@@ -60,7 +60,6 @@ fi
 Find out more about [Git's bash completion](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash).
 
 ## Command Line Status
-\label{cha:command_line}
 
 ```console
 ~/Repositories/take_on_rails (master *=) 2.0.0-p353 $
