@@ -78,9 +78,23 @@ includes the current branch and repository status information.
 (master *=$)
 ```
 
-* \* - My repository is in a "dirty state".
-* \$ - I have "stashed" something.
-* \= - My branch is up-to-date with 'origin/master'.
+| Output | What is going on?
+|--------|-----------------------------------------------
+| `\*`   | My repository is in a "dirty state".
+| `\$`   | I have "stashed" something.
+| `\=`   | My branch is up-to-date with 'origin/master'.
+| `\<`   | My branch is behind 'origin/master'.
+| `\>`   | My branch is ahead of 'origin/master'.
+| `\<\>` | My branch is ahead of 'origin/master'.
+
+I enabled these indicators by setting the following in my `\textasciitilde/.profile`:
+
+```console
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM="auto"
+```
 
 *For more information you can review [git's bash completion script](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh).*
 
@@ -88,7 +102,7 @@ includes the current branch and repository status information.
 2.0.0-p353
 ```
 
-Display the current Ruby version. *This was particularly helpful a few years ago when I had a mix of 1.8.x projects and 1.9.x projects.*
+Display the current Ruby version. *This was more helpful a few years ago when I had a mix of 1.8.x projects and 1.9.x projects.*
 
 \begin{aside}
 \label{aside:custom_ps_with_git}

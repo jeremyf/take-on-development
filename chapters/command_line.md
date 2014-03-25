@@ -4,7 +4,7 @@
 As an open source developer, I spend a fair amount of time on the command line.
 I am by no means an expert, but there are tweaks that I've made to my development system that I find very helpful.
 
-## [My `dotfiles` repository](https://github.com/jeremyf/dotfiles/)
+## My `dotfiles` repository
 \label{sec:my_dotfiles_repository}
 
 The configuration files of my `$HOME` directory are as important as any code I write.
@@ -19,7 +19,7 @@ I export the following custom [INPUTRC](http://www.gnu.org/software/bash/manual/
 
 <<(/Users/jfriesen/.inputrc, lang: sh)
 
-This can be done manually in `\textasciitilde/.profile` by adding the following lines.
+To enable your `INPUTRC` add the following lines to your `\textasciitilde/.profile`.
 
 ```sh
 if [ -f $HOME/.inputrc ]; then
@@ -27,7 +27,7 @@ if [ -f $HOME/.inputrc ]; then
 fi
 ```
 
-*The dotfiles project automatically handles this as part of its `script/bootstrap`.*
+*The dotfiles project handles this as part of its `script/bootstrap`.*
 
 ## My `project` command
 
@@ -35,7 +35,7 @@ I [work on a lot of repositories](https://github.com/jeremyf) over the course of
 The vast majority of them are Ruby repositories.
 
 As a matter of convention, all of my repositories are in `\textasciitilde/Repositories/`.
-This convention and my `project` command means I can quickly access any project in the terminal.
+This convention and my `project` command means I can open my projects with minimal typing.
 
 On the command line, if I type `project hydra`, then hit `tab` I get an tab completion list of matching directories in the `\textasciitilde/Repositories/` directory.
 
