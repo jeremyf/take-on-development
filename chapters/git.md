@@ -120,6 +120,8 @@ In fact, when I look at other people's PS1 and don't see git information, I am l
 
 ## Branching
 
+@TODO
+
 ## Bisect
 
 From `git-bisect`'s [man page](https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html).

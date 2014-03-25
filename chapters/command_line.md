@@ -55,7 +55,6 @@ In reality, I create a Sublime project for that directory and then open that pro
 
 Below are the three scripts that are necessary for the above behavior.
 
-
 ### Code Sample for `project`
 
 In `\textasciitilde/Repositories/dotfiles/bin/project`
