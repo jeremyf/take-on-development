@@ -5,6 +5,7 @@ As an open source developer, I spend a fair amount of time on the command line.
 I am by no means an expert, but there are tweaks that I've made to my development system that I find very helpful.
 
 ## [My `dotfiles` repository](https://github.com/jeremyf/dotfiles/)
+\label{sec:my_dotfiles_repository}
 
 The configuration files of my `$HOME` directory are as important as any code I write.
 It is both the tools and toolbox that I carry with me to do my job.
