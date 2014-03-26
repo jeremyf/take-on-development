@@ -184,6 +184,8 @@ At the time I didn’t have test coverage for that particular behavior.
 
 I patched the error, answered my managers question, and had an automated test that I could drop into my repository to make sure I didn’t reintroduce that behavior.
 
+## When to Commit
+
 ## Git Immersion
 
 @TODO - go through gitimmersion to speak authoritively

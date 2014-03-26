@@ -81,20 +81,23 @@ should use `bundle install` to install the same exact gems and versions across
 machines. You would use bundle update to explicitly update the version of a gem.
 ```
 
-This effectively removes your Gemfile.lock and generates a new one.
+This effectively removes the Gemfile.lock and generates a new one.
 It may create an identical Gemfile.lock (especially if you run `bundle update` back to back).
-But more likely, some dependency will change.
+But more likely, some dependency will have changed.
 
-Before you run `bundle update` make sure:
+Before I run `bundle update` I do my best to make sure:
 
-* your tests are all passing
-* you have a clean working
+* that my tests are all passing
+* that I have a clean working
 
-After you've run `bundle update` make sure:
+After I've run `bundle update` I again do my best to make sure:
 
-* your tests are all passing
+* that my tests are all passing
+* that I understand what has changed amongst the dependencies
 
-I would then stage and commit only the Gemfile.lock.[^run_a_script_then_commit]
+Assuming I am satisfied with my preliminary inspection I then stage and commit only the Gemfile.lock, commenting that I ran `bundle update`.[^run_a_script_then_commit].
+I rely on git and the focused commit to ensure that I can revert my Gemfile.lock; Passing tests never guarantee that something works.
+This is most evident to me when I update a Gemfile.lock and issues are found a day or so later.
 
 <!-- footnotes  -->
 [^gemfile_lock]: If you are working on your own gem, make sure to not checking in your local Gemfile.lock. [More from Yehuda Katz, creator of Bundler can be found at [http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/).
