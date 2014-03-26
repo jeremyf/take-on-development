@@ -2,8 +2,6 @@
 
 ## IRB
 
-### Ri
-
 ### Source Location
 
 ```ruby
@@ -11,6 +9,7 @@ obj = Object.new
 obj.method(:method_name).source_location
 => ["/path/to/ruby/file.rb", "LINE_NUMBER"]
 ```
+## Ri
 
 ### My `\textasciitilde/.irbrc`
 
