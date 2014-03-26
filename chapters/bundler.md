@@ -3,6 +3,16 @@
 > "Bundler maintains a consistent environment for ruby applications.
 > It tracks an application's code and the rubygems it needs to run, so that an application will always have the exact gems (and versions) that it needs to run." *[bundler.io](http://bundler.io/)*
 
+Once upon a time, in the dark days of yore, I was working on two Rails projects at the same time.
+Bundler did not yet exist, and the pain of dependency management was intense.
+
+Synchronizing gems amongst different developers was one challenge.
+Another was making sure those gems were properly setup on various production related environments.
+
+If I were to develop just one project on my machine I wouldn't need bundler.
+But its too easy not to use even then.
+And I can assure you that you will work on more than one project on your machine.
+
 ## Gemfile
 
 A Gemfile lists the explicit dependencies of a Ruby project.
