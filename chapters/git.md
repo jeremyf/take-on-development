@@ -51,7 +51,7 @@ $ git checkout --<tab>
 
 In your `\textasciitilde/.profile` add the following. *Or make use of my dotfiles repository~\ref{sec:my_dotfiles_repository}.*
 
-```console
+```sh
 if [ -f /path/to/your/git-completion.bash ]; then
   source /path/to/your/git-completion.bash;
 fi
@@ -80,12 +80,12 @@ includes the current branch and repository status information.
 
 | Output | What is going on?
 |--------|-----------------------------------------------
-| `\*`   | My repository is in a "dirty state".
-| `\$`   | I have "stashed" something.
-| `\=`   | My branch is up-to-date with 'origin/master'.
-| `\<`   | My branch is behind 'origin/master'.
-| `\>`   | My branch is ahead of 'origin/master'.
-| `\<\>` | My branch is ahead of 'origin/master'.
+| `*`   | My repository is in a "dirty state".
+| `$`   | I have "stashed" something.
+| `=`   | My branch is up-to-date with 'origin/master'.
+| `<`   | My branch is behind 'origin/master'.
+| `>`   | My branch is ahead of 'origin/master'.
+| `<>`  | My branch is ahead of 'origin/master'.
 
 I enabled these indicators by setting the following in my `\textasciitilde/.profile`:
 
@@ -144,7 +144,7 @@ $ git bisect good 3f5ee0d32dd2a13c9274655de825d31c6a12313f
 
 ### Run Your Test
 
-We’ve told git-bisect the good and bad commits.
+We've told git-bisect the good and bad commits.
 
 ```console
 $ git bisect run ./path/to/test-script
@@ -164,10 +164,10 @@ Git-bisect will converge on the commit that introduced the bad result and report
 
 What is this `./path/to/test-script`?
 
-I’ve used `rake` for my Rails project.
+I've used `rake` for my Rails project.
 But that was overkill - my `rake` test suite was very slow.
 
-I’ve also ran bisect on a test file in the repository (i.e. `ruby ./test/unit/page_test.rb`).
+I've also ran bisect on a test file in the repository (i.e. `ruby ./test/unit/page_test.rb`).
 In these cases the test was in my the repository.
 This meant the test was subject to changes over the commit time range.
 
@@ -180,9 +180,9 @@ I wrote a Capybara test that automated the steps my manager reported.
 Reproducing the error and creating an assertion of the expected behavior.
 
 A few weeks prior, I had introduced the odd behavior as a side-effect.
-At the time I didn’t have test coverage for that particular behavior.
+At the time I didn't have test coverage for that particular behavior.
 
-I patched the error, answered my managers question, and had an automated test that I could drop into my repository to make sure I didn’t reintroduce that behavior.
+I patched the error, answered my managers question, and had an automated test that I could drop into my repository to make sure I didn't reintroduce that behavior.
 
 ## When to Commit
 
