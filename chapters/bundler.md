@@ -21,7 +21,7 @@ The Gemfile.lock[^gemfile_lock], if one exists, lists the resolved dependency gr
 If you have a Gemfile but not a Gemfile.lock, running `bundle` in the project's root directory will generate a Gemfile.lock for the project.
 The resulting Gemfile.lock is the evaluated dependency graph *for your machine*.[^evaluated_dependency_graph_for_your_machine] If someone else were to run `bundle` against the same Gemfile their resulting Gemfile.lock might vary.
 
-However, once the Gemfile.lock is established, running `bundle` will install effectively the same things[^gemfile_lock_variances].
+However, once the Gemfile.lock is created, running `bundle` will install effectively the same things[^gemfile_lock_variances].
 
 ## Bundle Show
 
