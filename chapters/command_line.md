@@ -76,6 +76,19 @@ In fact one of the reasons I like Ruby so much is that it integrates quite nicel
 This is a small primer of only a handful of functions.
 For more detail, I'd recommend seeking out other resources.
 
+### man
+
+```console
+$ man man
+
+format and display the on-line manual pages
+```
+
+If you have questions about any of the commands, try typing `man` and the name of the function.
+This brings up the manual for that command.
+
+Some manuals are better than others.
+
 ### grep
 
 ```console
@@ -87,6 +100,14 @@ expression (RE) in the pattern matches the input line without its trailing
 newline. An empty expression matches every line. Each input line that matches at
 least one of the patterns is written to the standard output.
 ```
+
+When I first started open source programming, I had never heard of Regular Expressions.
+The `grep` command changed that.
+
+It is often the first tool I use for sifting through lots of files.
+There are lots of flavors of `grep` that I have barely explored (`grep`, `egrep`, `fgrep`, `zgrep`, `zegrep`, `zfgrep`).
+
+Good luck, and tell me what you find out.
 
 ### sed
 
@@ -110,9 +131,28 @@ This solution was better than writing a [REXML::StreamListener](http://www.germa
 
 ### find
 
-### awk
+```console
+$ man find
 
-### cut
+The find utility recursively descends the directory tree for each path listed,
+evaluating an expression (composed of the `primaries' and `operands' listed
+below) in terms of each file in the tree.
+```
+
+A powerful command which I most often use for listing filenames that match a textual pattern.
+
+```console
+$ find . -name my_ruby_file.rb
+```
+
+But wait, it can do so much more!
+Consider the following example provided in `find`'s man page.
+
+```console
+# Delete all broken symbolic links in /usr/ports/packages
+
+$ find -L /usr/ports/packages -type l -exec rm -- {} +
+```
 
 ### xargs
 
@@ -123,17 +163,50 @@ The xargs utility reads space, tab, newline and end-of-file delimited strings
 from the standard input and executes utility with the strings as arguments.
 ```
 
-A silly example, but one to illustrate the potential of `xargs`.
+A simple example is perhaps best for explaining `xargs`.
 The following command `echo "hello.txt" | xargs touch` is analogous to `touch hello.txt`.
 Both commands will create an empty file named "hello.txt".
 
 The following script:
 
-1. Finds all files with filenames that contain "hello"
-1. Replacing the "hello" portion of the filename with "world"
-1. Moving the files with filenames that contain "hello" to the replaced "world" filename.
+```console
+$ find . -name *hello* | sed -e "p;s/hello/world/" | xargs -n2 mv
+```
 
-`find . -name *hello* | sed -e "p;s/hello/world/" | xargs -n2 mv`
+1. Finds all files and directories with names that contain "hello"
+1. Replacing the "hello" portion of the name with "world"
+1. Move the files and directories with names that contain "hello" to files (or directories) with the "hello" portion of the name replaced with "world".
+
+I haven't tested the above script for all scenarios, but it has served me well when used in conjunction with source control.
+
+### Miscellaneous Commands
+
+What follows are a handful of commands that I have stitched together.
+There are likely other ways of doing these things, but they are the solutions that I have found.
+
+#### Kill every instance of Jetty
+
+For some reason, Jetty doesn't always stop. I went ahead and created a `kill-jetty` alias that executes the following:
+
+```console
+$ ps ax | grep jetty | grep -v grep | sed "s/^ *//g" | cut -f1 -d " " | xargs kill -9
+```
+
+In writing this book, I learned that I could just as easily do the above with the very concise command:
+
+```console
+$ pkill -f jetty
+```
+
+The above string of commands highlights how simple Unix commands can be sewn together to do powerful things.
+
+#### Commits since master
+
+Within a git repository, count the number of commits that your current branch is ahead of the master branch.
+
+```console
+$ git log master..`git rev-parse --symbolic-full-name --abbrev-ref HEAD` --oneline | wc -l | tr -d " "
+```
 
 <!-- footnotes -->
 
