@@ -64,3 +64,81 @@ In `\textasciitilde/Repositories/dotfiles/bin/project`
 In `\textasciitilde/Repositories/dotfiles/project/completion.bash`
 
 <<(/Users/jfriesen/Repositories/dotfiles/project/completion.bash, lang: sh)
+
+## Useful Shell Commands
+
+When I'm not writing code in my text editor, I'm often on the command line.
+If you are new to the Linux/Unix ecosystem it may be intimidating.
+
+I am comfortable on the command line, but am not an expert.
+In fact one of the reasons I like Ruby so much is that it integrates quite nicely with the command line.[^ruby_command_line_resources]
+
+This is a small primer of only a handful of functions.
+For more detail, I'd recommend seeking out other resources.
+
+### grep
+
+```console
+$ man grep
+
+The grep utility searches any given input files, selecting lines that match one
+or more patterns. By default, a pattern matches an input line if the regular
+expression (RE) in the pattern matches the input line without its trailing
+newline. An empty expression matches every line. Each input line that matches at
+least one of the patterns is written to the standard output.
+```
+
+### sed
+
+```console
+$ man sed
+
+The sed utility reads the specified files, or the standard input if no files are
+specified, modifying the input as specified by a list of commands.  The input is
+then written to the standard output.
+```
+
+One of my early Rails projects was working with a massive XML document.
+There were approximately 30,000 top level nodes each with 30 or so child/grand-child nodes.
+It was impossible to load into a tree parser.[^tell_me_about_a_tree_parser]
+
+I ended up writing a `sed` script that split the document into 30,000 lines.
+Each line representing a single top level node and its child nodes.
+
+From there I was able to read each line, and use a tree parser to individually parse each top-level node.
+This solution was better than writing a [REXML::StreamListener](http://www.germane-software.com/software/rexml_doc/classes/REXML/StreamListener.html) and worrying about tracking tag open and tag end.[^tell_me_about_a_stream_listener]
+
+### find
+
+### awk
+
+### cut
+
+### xargs
+
+```console
+$ man xargs
+
+The xargs utility reads space, tab, newline and end-of-file delimited strings
+from the standard input and executes utility with the strings as arguments.
+```
+
+A silly example, but one to illustrate the potential of `xargs`.
+The following command `echo "hello.txt" | xargs touch` is analogous to `touch hello.txt`.
+Both commands will create an empty file named "hello.txt".
+
+The following script:
+
+1. Finds all files with filenames that contain "hello"
+1. Replacing the "hello" portion of the filename with "world"
+1. Moving the files with filenames that contain "hello" to the replaced "world" filename.
+
+`find . -name *hello* | sed -e "p;s/hello/world/" | xargs -n2 mv`
+
+<!-- footnotes -->
+
+[^ruby_command_line_resources]: One of the things I love about Ruby is how seamlessly it integrates with the command line. David Copeland's [Build Awesome Command-Line Applications in Ruby 2](http://pragprog.com/book/dccar2/build-awesome-command-line-applications-in-ruby-2) is one resource.
+
+[^tell_me_about_a_tree_parser]: The tree parser's available at the time required that the entire XML document be read in one gulp. Each XML element would then be represented as one or more objects. So 30,000 top-level elements, and 30 or so child elements meant at least 900,000 XML specific objects would need to be created to represent that document, as well as the text and attributes. That is a ridiculous amount of objects to hold in memory.
+
+[^tell_me_about_a_stream_listener]: A stream listener reads the XML document character by character and essentially notifies the listener when you are opening a tag, closing a tag, encountering cdata, etc. Needless to say, to use a listener a developer must potentially track a lot of state.
