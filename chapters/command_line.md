@@ -3,14 +3,61 @@
 
 When I'm not writing code in my text editor, I'm often on the command line.
 If you are new to the Linux/Unix ecosystem it may be intimidating.
+I encourage you to spend time getting to know your command line.
 
 ## Useful Shell Commands
 
 I am comfortable on the command line, but am not an expert.
 In fact one of the reasons I like Ruby so much is that it integrates quite nicely with the command line.[^ruby_command_line_resources]
 
-This is a small primer of only a handful of functions.
+Below is a small primer of only a handful of functions.
 For more detail, I'd recommend seeking out other resources.
+[An excellent Bash cheatsheet can be found at learncodethehardway.org](http://cli.learncodethehardway.org/bash_cheat_sheet.pdf)
+
+### Getting your bearings
+
+The command line can be an initially disorienting location.
+The following three commands are the basics for navigation: `pwd`, `ls`, and `cd`.
+
+#### pwd - where am I at?
+
+```console
+$ man pwd
+
+The pwd utility writes the absolute pathname of the current working directory to
+the standard output.
+```
+
+#### cd - change where I am at
+
+```console
+$ cd path/to/another/directory
+```
+
+Change directory.
+
+#### ls - see what is around me
+
+```console
+$ man ls
+
+List directory contents
+```
+
+If you want to see information about files in your working directory, a quick `ls` will tell you.
+You can provide an alternate directory.
+
+#### which - where is the program file that is executing
+
+```console
+$ man which
+
+The which utility takes a list of command names and searches the path for each executable file that would be run had these commands actually been invoked.
+```
+
+Out of the box your machine will come with lots of commands.
+You may configure your $PATH to prepend a directory for custom installs.
+After awhile you may not know which file is being call. `which` is here to help.
 
 ### man
 
@@ -44,6 +91,22 @@ It is often the first tool I use for sifting through lots of files.
 There are lots of flavors of `grep` that I have barely explored (`grep`, `egrep`, `fgrep`, `zgrep`, `zegrep`, `zfgrep`).
 
 Good luck, and tell me what you find out.
+
+#### ack
+
+```console
+$ man ack
+
+Ack is designed as a replacement for 99% of the uses of grep.
+
+Ack searches the named input FILEs (or standard input if no files are named, or
+the file name - is given) for lines containing a match to the given PATTERN.
+By default, ack prints the matching lines.
+```
+
+If you are using Mac OS X, you'll likely need to install ack or ag.
+
+I haven't trained myself to use ack, but by many accounts it is more useful for current work.
 
 ### sed
 
@@ -120,6 +183,14 @@ I haven't tested the above script for all scenarios, but it has served me well w
 What follows are a handful of commands that I have stitched together.
 There are likely other ways of doing these things, but they are the solutions that I have found.
 
+#### Change directory into the parent directory of an executable file
+
+```console
+$ cd `which ruby`/..
+```
+
+The above command will find where your `ruby` executable is, then change into the containing directory of that executable. The backticks are for [command substition](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html#sect_03_04_04). The `which ruby` is executed and the returned value is used in the context of the containing command. That is if `which ruby` returned `/path/to/ruby` then the above command would be equivalent to `cd /path/to/ruby/..`)
+
 #### Kill every instance of Jetty
 
 For some reason, Jetty doesn't always stop. I went ahead and created a `kill-jetty` alias that executes the following:
@@ -128,7 +199,7 @@ For some reason, Jetty doesn't always stop. I went ahead and created a `kill-jet
 $ ps ax | grep jetty | grep -v grep | sed "s/^ *//g" | cut -f1 -d " " | xargs kill -9
 ```
 
-In writing this book, I learned that I could just as easily do the above with the very concise command:
+In writing this book, I learned that I could do the above with the very concise command:
 
 ```console
 $ pkill -f jetty
