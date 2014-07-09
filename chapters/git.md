@@ -30,7 +30,7 @@ Did I mention we didn't have automated tests?
 
 I recommend that you enable `git`'s tab completion.
 Git has a large suite of commands.
-I've stumbled upon a few unknown commands and options as I've tabbed on the command line.
+With tab completion installed, I've stumbled upon a few unknown commands and options.
 
 Either the command:
 
@@ -128,6 +128,8 @@ From `git-bisect`'s [man page](https://www.kernel.org/pub/software/scm/git/docs/
 
 > git-bisect – Find by binary search the change that introduced a bug
 
+This is one of many killer features for `git`.
+
 *This is updated from a [previous blog post](http://blogs.nd.edu/jeremyfriesen/2012/10/08/using-git-bisect-for-finding-when-a-bug-was-introduced/).*
 
 ### Prepare Your Bisect
@@ -185,6 +187,20 @@ At the time I didn't have test coverage for that particular behavior.
 I patched the error, answered my managers question, and had an automated test that I could drop into my repository to make sure I didn't reintroduce that behavior.
 
 ## When to Commit
+
+I like to commit early and often.
+One trick I've used is to create a feature branch then make numerous commits, often times with terse messages.
+By doing this I have an excellent "undo" buffer.
+
+Once I'm ready to share these changes, I will use an interactive rebase to amend the commit messages.
+This way I can focus on two distinct modes of concentration:
+
+* Writing supporting specs and code
+* Writing commit messages
+
+For me, the mental state for those two modes is different.
+So I use the rebase trick to force my brain into writing more details concerning any of the changes.
+This may mean that two or more commits are squashed together as they might make sense together.
 
 ## Git Immersion
 
