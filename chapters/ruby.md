@@ -3,13 +3,17 @@
 First, write your obligatory Hello World program.
 I'll help you out so we can proceed:
 
-```shell
+```console
 $ ruby -e 'puts "Hello World"'
 ```
 
 Done!
 
+Now on to other things.
+
 ## Idioms
+
+When I started in Ruby, there were three foreign concepts: blocks, modules mixins, and method missing behavior. I'll add regular expressions, as I was just starting to tinker with them.
 
 ### Blocks
 
@@ -17,7 +21,25 @@ Done!
 
 ### Method Missing
 
-## IRB
+### Regular Expressions
+
+## Interactive Ruby Shell (irb)
+
+```console
+$ man irb
+
+irb is the REPL(read-eval-print loop) environment for Ruby programs.
+```
+
+Back to the Hello World example.
+
+```console
+$ irb
+>> puts 'Hello World'
+Hello World
+=> nil
+>>
+```
 
 ### Source Location
 
