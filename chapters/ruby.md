@@ -1,5 +1,22 @@
 # Ruby
 
+First, write your obligatory Hello World program.
+I'll help you out so we can proceed:
+
+```shell
+$ ruby -e 'puts "Hello World"'
+```
+
+Done!
+
+## Idioms
+
+### Blocks
+
+### Module Mixins
+
+### Method Missing
+
 ## IRB
 
 ### Source Location
