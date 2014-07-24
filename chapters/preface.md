@@ -1,3 +1,5 @@
+> Status: @READY_FOR_QA
+
 # Preface
 
 Since early in my professional programming career, I have often worked alone.

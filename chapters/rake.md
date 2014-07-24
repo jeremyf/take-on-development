@@ -1,3 +1,5 @@
+> Status: @READY_FOR_QA
+
 # Rake
 
 One of the late [Jim Weirich](http://en.wikipedia.org/wiki/Jim_Weirich)'s pervasive contributions to the Ruby community.
@@ -20,7 +22,6 @@ o   Flexible FileLists that act like arrays but know about manipulating file nam
 o   A library of prepackaged tasks to make building rakefiles easier.
 ```
 
-
 ## rake -w
 
 Invoke rake with the `-w` option to see where each task is defined.
@@ -35,7 +36,7 @@ rake release    ./bundler-1.5.2/lib/bundler/gem_helper.rb:48:in `install'
 
 ## The Rake Field Manual
 
-My appreciation continues to grow. Fanned ever higher by [Avdi Grim's "Learn advanced Rake in 7 episode"](http://devblog.avdi.org/2014/04/30/learn-advanced-rake-in-7-episodes/) and his upcoming ["Rake Field Manual"](http://www.rakefieldmanual.com/).
+My appreciation for Rake continues to grow. Fanned ever higher by [Avdi Grim's "Learn advanced Rake in 7 episode"](http://devblog.avdi.org/2014/04/30/learn-advanced-rake-in-7-episodes/) and his upcoming ["Rake Field Manual"](http://www.rakefieldmanual.com/).
 
 I'm not going to dive any further into this than to say, take a look at Avdi Grim's resources.
 He's built [Quarto - an ebook generation toolchain powered by Rake](https://github.com/avdi/quarto).

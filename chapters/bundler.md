@@ -1,3 +1,5 @@
+> Status: @READY_FOR_QA
+
 # Bundler
 
 > "Bundler maintains a consistent environment for ruby applications.
