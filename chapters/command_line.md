@@ -30,6 +30,8 @@ The pwd utility writes the absolute pathname of the current working directory to
 the standard output.
 ```
 
+Find out the path to where you are on the file system.
+
 #### cd - change where I am at
 
 ```console
