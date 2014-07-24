@@ -13,9 +13,33 @@ Now on to other things.
 
 ## Idioms
 
-When I started in Ruby, there were three foreign concepts: blocks, modules mixins, and method missing behavior. I'll add regular expressions, as I was just starting to tinker with them.
+When I started in Ruby, there were three foreign concepts: blocks, modules mixins, and method missing behavior.
+I'll add regular expressions, as I was just starting to tinker with them.
+
+### Instance Method vs. Class Method Annotation
 
 ### Blocks
+
+With the rise of Javascript, the idea of blocks is less obtuse.
+They can be thought of as [anonymous functions](http://en.wikipedia.org/wiki/Anonymous_function).
+
+In other words, when you pass a block as part of your message, the receiver decides how to handle the block.
+It could:
+
+* Ignore it
+* Call it 1000 times
+* Pass it on as lambda to another method invocation
+
+As with all functions, blocks take parameters.
+The `#each` method is a common receiver of a block, yielding one parameter.
+
+```ruby
+[1,2,3,4].each do |index|
+  puts index
+end
+```
+
+The above Ruby code will write to STDOUT 1,2,3, and 4; Each separated by a new line.
 
 ### Module Mixins
 
