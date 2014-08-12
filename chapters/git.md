@@ -120,6 +120,49 @@ In fact, when I look at other people's PS1 and don't see git information, I am l
 
 ## Branching
 
+If you are planning on collaborating on projects via git, make sure you are leveraging git to help along the way.
+
+I've mapped `git branch -avv` to `git ba`.
+
+Compare the three examples:
+
+Local branches with little information:
+
+```console
+$ git branch
+* chore-verify-isolation-tests
+  master
+```
+
+Local branches only but with tracking information:
+
+```console
+$ git branch -vv
+* chore                   402150b [jeremyf/chore: ahead 1] Adding documentation
+  master                  a7dda4a [origin/master] Merge pull request #1 from jeremyf/dltp-123
+```
+
+All branches with tracking information:
+
+```console
+$ git branch -avv
+* chore                   402150b [jeremyf/chore: ahead 1] Adding documentation
+  master                  a7dda4a [origin/master] Merge pull request #1 from jeremyf/dltp-123
+  remotes/jeremyf/chore   402150b Verifying specs run in isolation
+  remotes/jeremyf/master  4cef983 Updating README with badges [skip ci]
+  remotes/origin/master   a7dda4a Merge pull request #1 from jeremyf/dltp-123
+```
+
+At a glance, `git branch -avv` gives me the best perspective of what is happening.
+
+I use `git branch -avv` all of the time, and went ahead and made `git ba` an alias.
+To do this, I added the following to my `.gitconfig`:
+
+```console
+[alias]
+        ba = branch -a -vv
+```
+
 @TODO
 
 ## Bisect
