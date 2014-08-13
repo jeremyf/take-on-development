@@ -118,9 +118,12 @@ In fact, when I look at other people's PS1 and don't see git information, I am l
 
 <<(/Users/jfriesen/Repositories/dotfiles/system/ps1.bash, lang: sh)
 
-## Branching
+## Git Config
 
-If you are planning on collaborating on projects via git, make sure you are leveraging git to help along the way.
+I make extensive use of git aliases, to help encapsulate common behavior for my workflow.
+In my `~/.gitconfig` I've added a several aliases. And when using Bash Completion, these alias will also tab complete. Here are a few of them:
+
+### Show Very Verbose Branch Details
 
 I've mapped `git branch -avv` to `git ba`.
 
