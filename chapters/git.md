@@ -125,8 +125,6 @@ In my `~/.gitconfig` I've added a several aliases. And when using Bash Completio
 
 ### Show Very Verbose Branch Details
 
-I've mapped `git branch -avv` to `git ba`.
-
 Compare the three examples:
 
 Local branches with little information:
