@@ -49,6 +49,12 @@ And three months after a documentation push, the documentation is out of date.
 It provides incorrect instructions.
 Or does not reflect the current and changing reality.
 
-Part of the cure for this is writing tests.
+Part of the cure for lying documentation is to write tests.
 Tests explain how things are working.
 And what the system interactions are.
+
+Write tests that have clear examples of input and output.
+Place an effort on making these tests understandable with minimal up front domain knowledge.
+
+For [recent projects](https://github.com/ndlib/hydramata-works), I have made a commitment to grooming a "Getting Your Bearings" section of the README.
+This section points to tests that document what the system is doing.
