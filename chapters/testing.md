@@ -41,7 +41,7 @@ I recommend reading “The Clean Coder: A Code of Conduct for Professional Progr
 
 ## The Documentation Lies
 
-I maintain that the first tatoo I get will be the words "The Documentation Lies."
+I maintain that the first tattoo I get will be the words "The Documentation Lies."
 I have seen well intentioned efforts to write documentation come up short.
 Effort is spent describing how the system should be working; Or how the system interacts with other systems.
 
