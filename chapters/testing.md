@@ -1,1 +1,41 @@
 # Testing
+
+> We write tests first because we find that it helps us write better code.
+> Writing a test first forces us to clarify our intentions, and we don’t start the next piece of work until we have an unambiguous description of what it should do.
+> –- Kent Beck's forward for "Growing Object-Oriented Software, Guided by Tests" by Steve Freeman and Nat Pryce.
+
+## Wisdom is Learning from Other People's Mistakes
+
+My first Rails project started December 2005.
+I dove in and began writing the production code.
+I was learning Rails for the first time.
+It was a volitale period in which Rails and its echo system were rapidly evolving.
+
+So much was changing, and I was working at learning it all, that I didn’t feel I could add "writing tests" to the list of things I could do.
+
+And I learned this was the path of pain.
+Not only was I writing bugs – every developer does this – but the ecosystem was changing from beneath me.
+Everything was in motion and my code was sloshing around, collapsing in on itself.
+
+It was a nightmare of fragility.
+Had I been writing tests, the nightmare would have been real, but there would have been at least one more thing verifying that what I did yesterday worked today.
+
+## Types of Tests
+
+As you are exploring testing you may hear about all sorts of tests: Unit, Functional, Integration, Component, System, Exploratory, Feature, Acceptance, etc.
+
+You may hear about Test-Driven Development and Behavior-Driven Development.
+
+There is a lot of discussion regarding tests. At this point, I would recommend thinking about tests as belonging to two categories:
+
+* Isolated
+* Integrated
+
+Alan Kay, an author of Smalltalk, coined the term object-oriented, positing that objects are similar to biological cells that send each other messages.
+
+Think of isolated tests as testing a single cell. This is where you make sure the cell is operating in a well-structured manner. *Isolated tests help me write code the right way.*
+
+Think of integrated tests as tests that coordinate the interaction of multiple cells. This is where you make sure your organism is operating as expected. *Integrated tests help me write code that is doing the right thing.*
+
+I would highly recommend “The Clean Coder: A Code of Conduct for Professional Programmers” by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
+
