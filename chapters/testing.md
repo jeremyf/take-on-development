@@ -31,11 +31,24 @@ There is a lot of discussion regarding tests. At this point, I would recommend t
 * Isolated
 * Integrated
 
-Alan Kay, an author of Smalltalk, coined the term object-oriented, positing that objects are similar to biological cells that send each other messages.
+[Dr. Alan Kay](http://en.wikipedia.org/wiki/Alan_Kay), an author of Smalltalk, coined the term object-oriented. Dr. Kay posited that objects are similar to biological cells that send each other messages.
 
 Think of isolated tests as testing a single cell. This is where you make sure the cell is operating in a well-structured manner. *Isolated tests help me write code the right way.*
 
 Think of integrated tests as tests that coordinate the interaction of multiple cells. This is where you make sure your organism is operating as expected. *Integrated tests help me write code that is doing the right thing.*
 
-I would highly recommend “The Clean Coder: A Code of Conduct for Professional Programmers” by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
+I recommend reading “The Clean Coder: A Code of Conduct for Professional Programmers” by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
 
+## The Documentation Lies
+
+I maintain that the first tatoo I get will be the words "The Documentation Lies."
+I have seen well intentioned efforts to write documentation come up short.
+Effort is spent describing how the system should be working; Or how the system interacts with other systems.
+
+And three months after a documentation push, the documentation is out of date.
+It provides incorrect instructions.
+Or does not reflect the current and changing reality.
+
+Part of the cure for this is writing tests.
+Tests explain how things are working.
+And what the system interactions are.
