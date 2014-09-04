@@ -20,6 +20,11 @@ Everything was in motion and my code was sloshing around, collapsing in on itsel
 It was a nightmare of fragility.
 Had I been writing tests, the nightmare would have been real, but there would have been at least one more thing verifying that what I did yesterday worked today.
 
+Today, I write tests.
+When I am thinking about a solution, I also ask myself "How will I go about verifying the solution?"
+I capture the answer to the form in my "production" code and the latter in my "test" code.
+Both are important.
+
 ## Types of Tests
 
 As you are exploring testing you may hear about all sorts of tests: Unit, Functional, Integration, Component, System, Exploratory, Feature, Acceptance, etc.
