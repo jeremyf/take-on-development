@@ -12,6 +12,7 @@ bundler.md
 rake.md
 rails.md
 testing.md
+modes_of_development.md
 rspec.md
 cucumber.md
 miscellany.md

@@ -1,5 +1,14 @@
 # Rails
 
+## Fundamentals
+
+Server processes a request and sends a response. Browser interprets the response and may:
+
+* Issue a new request without user knowledge (i.e. follow a 302 response to its location)
+* Render the response in the negotiated format
+
+Static Pages vs. Application Processed vs. Forwarded
+
 ## Rails command
 
 @TODO
