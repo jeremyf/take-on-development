@@ -17,3 +17,4 @@
 * Reviewing a branch not yet ready for pull request review
 * Meetings - my goal is to get out of meetings as quick as possible with clear action items
 * Reflection
+* Word Smithing
