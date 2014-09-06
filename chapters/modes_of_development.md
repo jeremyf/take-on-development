@@ -34,9 +34,26 @@ Each mode has a single responsibility.
 
 ## Modes that I can think of
 
-* Thinking on a solution
-* Writing an isolated test
-* Writing an integration test
+### Meeting Mode
+
+Goal: Capture group decisions, action items, keep things moving.
+Method: Have an agenda. Have a facilitator, note taker, and time keeper. Be quick to appoint small groups.
+
+### Thinking on a Solution
+
+Goal: To arrive at a decision that can be acted on.
+Method: Go for a walk. Talk it over with someone. Draw and diagram. Prototype code.
+
+### Writing an Isolated Test
+
+Goal: To build a supporting case for an integration test.
+Method: Use low-overhead collaborators; Mocks and stubs are great, production data structures are also great.
+
+### Writing an Integration Test
+
+Goal: To formalize a method for asserting that a solution is acceptable.
+Method: Think not on the solution, but how the solution can be verified.
+
 * Writing the first pass of a solution
 * Working on a feature as isolated tests begin passing but the integrated tests continue to fail
 * Refining how a test reads
