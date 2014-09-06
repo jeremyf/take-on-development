@@ -54,6 +54,23 @@ Each mode has a single responsibility.
 * **Goal:** To formalize a method for asserting that a solution is acceptable.
 * **Method:** Think not on the solution, but how the solution can be verified.
 
+### Writing a First Pass Solution
+
+* **Goal:** Get an integration test passing; Assert that something works.
+* **Method:** Write a class that attempts to resolve the solution. Look towards collaborators necessary to solve the problem. Keep SOLID principles salient. Jump into isolated tests to flesh out the core class and its contributors.
+
+### Refining How a Test Reads
+
+* **Goal:** Create a document that can be used as a reference point into the system
+* **Method:** Write the tests for clarity and expressiveness. Convey meaning and how things are assembled. In my experience this focusing on legible and digestable tests is stronger than any README documentation.
+* **Caveat:** Documentation lies. Consider documentation that can assert it is correct. That documentation is an automated test.
+
+### Documentation
+
+* **Goal:** Convey high level concepts; Why things are being done, not how; The code describes how things are done.
+* **Method:** Write brief descriptions. Bullet points are your friend. Write for the web.
+* **Caveat:** See Refining How a Test Reads
+
 ### Writing a Commit Message
 
 * **Goal:** To create a helpful message to future developers
@@ -77,12 +94,9 @@ Each mode has a single responsibility.
 
 ### Exploring an External Dependency
 
-* Writing the first pass of a solution
-* Working on a feature as isolated tests begin passing but the integrated tests continue to fail
-* Refining how a test reads
+### Reviewing
+
 * Refactoring the first pass to a bearable solution
 * Writing an off-hand commit message
 * Reviewing a branch not yet ready for pull request review
-* Meetings - my goal is to get out of meetings as quick as possible with clear action items
 * Reflection
-* Word Smithing
