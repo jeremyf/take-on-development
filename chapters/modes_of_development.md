@@ -94,6 +94,14 @@ Each mode has a single responsibility.
 
 ### Exploring an External Dependency
 
+* **Goal:** To assess and determine the viability of an external solution.
+* **Method:** Read the README. Check the test suite for existence, legibility, and clarity. Check other adopters (i.e. ruby-toolbox.com). Attempt to run the tests. Check code coverage and quality (i.e. coveralls and code climate). Check commit messages for clarity. Look at frequency of contributions. Look for similar solutions.
+
+### Writing Blog Posts
+
+* **Goal:** To assimilate lessons learned and convey those lessons in a digestible format.
+* **Method:** Write concise posts. Build from previous posts. Explore ideas. Offer links to supporting evidence. Highlight lessons learned. Take a risk. Accept amendments.
+
 ### Reviewing
 
 * Refactoring the first pass to a bearable solution
