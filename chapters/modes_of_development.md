@@ -102,9 +102,15 @@ Each mode has a single responsibility.
 * **Goal:** To assimilate lessons learned and convey those lessons in a digestible format.
 * **Method:** Write concise posts. Build from previous posts. Explore ideas. Offer links to supporting evidence. Highlight lessons learned. Take a risk. Accept amendments.
 
-### Reviewing
+### Refactoring
 
-* Refactoring the first pass to a bearable solution
-* Writing an off-hand commit message
-* Reviewing a branch not yet ready for pull request review
-* Reflection
+* **Goal:** To move the code to a more expressive state.
+* **Method:** Create a new branch. Baby step commits, the messages are disposable. Craft the final commit message. If new ideas bubble up, create another branch and explore. A flurry of commits, sometimes spanning multiple branches. Each branch an atomic concept.
+* **Caveat:** Once the refactor is complete, prepare a pull request.
+
+### Reviewing a branch not yet ready for pull request review
+
+### Unearth a Problem
+
+* **Goal:** To identify a problem and how this problem manifests
+* **Method:** Ask lots of questions. Poke and prod at assumptions. Review commit logs to see if there is churn on a particular constellation of files. Challenge each and every "We should do [better at]..." there is a problem in there, noodle on it. Roll it around.
