@@ -110,6 +110,14 @@ Each mode has a single responsibility.
 
 ### Reviewing a branch not yet ready for pull request review
 
+* **Goal:** To help give shape to the solution as it is worked on by others
+* **Method:** Ask lots of questions. Why this particular name? What do you mean here? Is there an abstraction you are wrestling with?
+
+### Story Triage
+
+* **Goal:** To expand user stories to more actionable developer tasks
+* **Method:** Review the existing story and think about the impact on the existing system. Think about strange states. Ask about all the UI components; What should the copy be? What should the UI experience be? Think of other related things that could be abstracted.
+
 ### Unearth a Problem
 
 * **Goal:** To identify a problem and how this problem manifests
