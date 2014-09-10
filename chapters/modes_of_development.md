@@ -30,6 +30,32 @@ Each mode has a single responsibility.
 
 ## Its Red, Green, Refactor
 
+Red, Green, Refactor is a hallmark Test Driven Development.
+
+* **Red:** Write a test that will verify something works, before you write the thing to make it work.
+* **Green:** Write the thing to make your test pass.
+* **Refactor:** Improve on your solution to the problem.
+
+It is a powerful method for solving a problem.
+But is incomplete.
+
+Before I can get to Red I need to know what I am trying to solve.
+A proposed solution is a response to an observation.
+The proposed solution is a hypothetical solution to a real world problem.
+
+Once I have a proposed solution, I forumalate how I will verify my solution.
+Then I analyze the results of the tests and the solution.
+
+This cleaves close to the [scientific method](http://en.wikipedia.org/wiki/Scientific_method)
+
+* Observe
+* Conjecture
+* Predict
+* Test
+* Analyze
+
+The Red, Green, Refactor is the manifestation of the Test and Analyze steps of the scientific process.
+
 [Never Unprepared: The Complete Game Master’s Guide to Session Prep](http://www.enginepublishing.com/never-unprepared-the-complete-game-masters-guide-to-session-prep) by Phil Vecchione
 
 ## Modes that I can think of
