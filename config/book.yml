@@ -7,3 +7,5 @@ description: Change me.
 author: Jeremy Friesen
 copyright: 2014
 uuid: 2698afd7-5ef8-43fa-9017-85728e0dfcde
+pdf_preview_page_range: 1..5
+epub_mobi_preview_chapter_range: 0..5
