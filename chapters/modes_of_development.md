@@ -56,7 +56,42 @@ This cleaves close to the [scientific method](http://en.wikipedia.org/wiki/Scien
 
 The Red, Green, Refactor is the manifestation of the Test and Analyze steps of the scientific process.
 
-[Never Unprepared: The Complete Game Master’s Guide to Session Prep](http://www.enginepublishing.com/never-unprepared-the-complete-game-masters-guide-to-session-prep) by Phil Vecchione
+Important in the Red, Green, Refactor methodology, is my recognition of which mental state in which I am working.
+There have been too many times where I've been in a Refactor mode and drifted towards writing new features.
+
+What ends up happening is I end up with a very dirty working directory.
+I have lots of changes and layers of abstraction that are comingled.
+I end up spending a bit of time using git's interative shell to pick apart the larger ideas.
+
+## Never Unprepared
+
+I am an avid player and facilitator of table top role-playing games.
+You've been warned.
+
+> Take something complicated, break it up in to manageable parts, and then tackle them over time in order to achieve a goal. -- *Phil Vecchione*
+
+In 2012 I picked up a copy of Phil Vecchione's [Never Unprepared: The Complete Game Master’s Guide to Session Prep](http://www.enginepublishing.com/never-unprepared-the-complete-game-masters-guide-to-session-prep). Phil is a gamer at heart, and a project manager by trade. "Never Unprepared" is the intersection of the time management skills of a professional project manager and his hobby.
+
+Phil speaks about the five steps of preparation.
+
+* Brainstorming - Spawn lots of ideas
+* Selection - Winnow down the ideas
+* Conceptualization - Expand on the selected ideas
+* Documentation - Write down meaningful notes for the concepts
+* Review - Reconcile the notes for consistency
+
+In identifying the steps, Phil is creating boundaries for the types of tasks he does.
+In creating these boundaries, he declares the constraints on the time he is working.
+
+There is no place for rejecting ideas during the brainstorming nor documentation phase.
+Selection is the time for doing so.
+
+More than any software development book, Never Unprepared is a guide for my day to day professional life.
+
+It also helped me think about the different mental modes that I might enter over the course of a work day.
+What follows is a survey of the various modes that I enter.
+As a junior developer some of these modes may not be applicable.
+As a mid-level developer many of them may be applicable.
 
 ## Modes that I can think of
 
