@@ -11,7 +11,7 @@ Now it is the collaborative nature of the tool.
 
 Back in the early days of my Rails projects, I was working on a project managed in SVN.
 I was working on an extended feature and decided to create a branch.
-Work proceeded both branches.
+Work proceeded on both branches.
 
 Then came the reckoning.
 
@@ -19,10 +19,10 @@ We attempted to merge the code.
 And everything fell apart.
 
 We ended up spending 8 hours merging things.
-And I don't think we got things right.
+And I don't think we got it right.
 That day we decided we needed to move to git.
 
-Did I mention we didn't have automated tests?
+Did I mention we had minimal automated tests?
 
 \end{aside}
 
