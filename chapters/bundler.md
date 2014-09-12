@@ -6,13 +6,14 @@
 > It tracks an application's code and the rubygems it needs to run, so that an application will always have the exact gems (and versions) that it needs to run." *[bundler.io](http://bundler.io/)*
 
 Once upon a time, in the dark days of yore, I was working on two Rails projects at the same time.
-Bundler did not yet exist, and the pain of dependency management was intense.
+Bundler did not yet exist. The pain of dependency management was intense. Gems were a shared jumbled mess.
 
 Synchronizing gems amongst different developers was one challenge.
-Another was making sure those gems were properly setup on various production related environments.
+Another was ensuring the gem setup was correct on the various production related environments.
 
 If I were to develop just one project on my machine I wouldn't need bundler.
-But its too easy not to use even then.
+But it is a part of the Ruby ecosystem now.
+Even if you work on one project, Bundler is easy enough to use to be worth the overhead.
 And I can assure you that you will work on more than one project on your machine.
 
 ## Gemfile
@@ -23,7 +24,7 @@ The Gemfile.lock[^gemfile_lock], if one exists, lists the resolved dependency gr
 If you have a Gemfile but not a Gemfile.lock, running `bundle` in the project's root directory will generate a Gemfile.lock for the project.
 The resulting Gemfile.lock is the evaluated dependency graph *for your machine*.[^evaluated_dependency_graph_for_your_machine] If someone else were to run `bundle` against the same Gemfile their resulting Gemfile.lock might vary.
 
-However, once the Gemfile.lock is created, running `bundle` will install effectively the same things[^gemfile_lock_variances].
+However, once the Gemfile.lock is created, running `bundle` will install the same things[^gemfile_lock_variances].
 
 ## Bundle Show
 
