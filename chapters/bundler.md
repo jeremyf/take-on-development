@@ -35,8 +35,8 @@ Show lists the names and versions of all gems that are required by your Gemfile.
 Calling show with [GEM] will list the exact location of that gem on your machine.
 ```
 
-Of the two options, I more often use `bundle show <name_of_gem>`.[^why_bundle_show]
-I more often want to know where a gem was installed than see the list of gems that are referenced.
+Of the two options – with or without a gem name - I more often use `bundle show <name_of_gem>`.[^why_bundle_show]
+I want to know where a gem was installed more often than I want to see the gem list.
 
 And I often follow with `bundle open <name_of_gem>`.
 
@@ -49,9 +49,9 @@ Opens the source directory of the given bundled gem
 ```
 
 When I want to dig around in the gem's executed code, I run `bundle open <name_of_gem>`.
-My text editor pops open and begin the spelunking; All of the gem's code is there to review.[^well_not_all_of_it]
+My text editor pops open and I begin the spelunking; All of the gem's code is there to review.[^well_not_all_of_it]
 
-Sometimes I'll bring a pickaxe to the dig and start modifying the code;
+Sometimes I'll bring a pickaxe to the excavation and start modifying the code;
 Insert a debugger statement in one place[^dont_forget_to_clean_up];
 Log parameters and collaborators in another location.
 
@@ -66,7 +66,8 @@ Opens an IRB session with the bundle pre-loaded
 ```
 
 I learned about this command late in 2013; Its been around longer than that, but I was a little dense in my failure to notice the command[^regularly_dash_help].
-Personally I prefer to stay out of the console and instead rely on tests, but it is another tool for exploring how your code is behaving.[^if_you_type_it_in_console_once_consider_a_test]
+
+I prefer to stay out of the console and instead rely on tests, but it is another tool for exploring how your code is behaving.[^if_you_type_it_in_console_once_consider_a_test]
 
 ## Bundle Outdated
 
@@ -94,14 +95,14 @@ should use `bundle install` to install the same exact gems and versions across
 machines. You would use bundle update to explicitly update the version of a gem.
 ```
 
-This effectively removes the Gemfile.lock and generates a new one.
-It may create an identical Gemfile.lock (especially if you run `bundle update` back to back).
-But more likely, some dependency will have changed.
+This removes the Gemfile.lock and generates a new one.
+It may create an identical Gemfile.lock (if you run `bundle update` back to back it has a high probability of being identical).
+If a lot of time has elasped between updates at least one dependency will have changed.
 
 Before I run `bundle update` I do my best to make sure:
 
 * that my tests are all passing
-* that I have a clean working
+* that I have a clean working directory
 
 After I've run `bundle update` I again do my best to make sure:
 
@@ -110,7 +111,9 @@ After I've run `bundle update` I again do my best to make sure:
 
 Assuming I am satisfied with my preliminary inspection I then stage and commit only the Gemfile.lock, commenting that I ran `bundle update`.[^run_a_script_then_commit].
 I rely on git and the focused commit to ensure that I can revert my Gemfile.lock; Passing tests never guarantee that something works.
-This is most evident to me when I update a Gemfile.lock and issues are found a day or so later.
+This is most evident I update a Gemfile.lock and issues are found a day or so later.
+
+Also consider the more targeted `bundle update <gem_name(s)>`. This command will keep all explicit locks except for the named gem(s). The named gem(s) will be updated along with those gem's dependencies.
 
 <!-- footnotes  -->
 [^gemfile_lock]: If you are working on your own gem, make sure to not checking in your local Gemfile.lock. [More from Yehuda Katz, creator of Bundler can be found at [http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/).
