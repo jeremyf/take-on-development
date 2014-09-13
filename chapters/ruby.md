@@ -72,19 +72,78 @@ obj = Object.new
 obj.method(:method_name).source_location
 => ["/path/to/ruby/file.rb", "LINE_NUMBER"]
 ```
-## Ri
-
-@TODO
 
 ### My `\textasciitilde/.irbrc`
 
-## Byebug
+A few helpful tweaks for IRB:
 
-@TODO - A Ruby debugger
+<<(/Users/jfriesen/Repositories/dotfiles/ruby/irbrc.symlink, lang: ruby)
+
+Or if you prefer, replace the default IRB behavior with Pry.
+
+```ruby
+require 'rubygems'
+require 'pry'
+Pry.start
+exit
+```
 
 ## Pry
 
 > "Pry is a powerful alternative to the standard IRB shell for Ruby.
 > It features syntax highlighting, a flexible plugin architecture, runtime invocation and source and documentation browsing." - *[pryrepl.org](http://pryrepl.org/)*
 
-I don't have a lot of experience with Pry, but it looks powerful.
+I started using Pry in the summer of 2014.
+I had trouble rebuilding Byebug for my debugger.
+I opted to give Pry a try.
+
+Based on how I had used Byebug, out of the box Pry had enough features for me to hobble along.
+Then I installed `pry-debugger` and I found myself no longer needing `byebug`.
+
+It is a compelling replacement for IRB and Byebug.
+I am making a comittment to practice using Pry and exploring more of it.
+
+Launch `pry` from the command line then walk along:
+
+```ruby
+
+# See the methods for the current context
+pry(main)> ls
+
+self.methods: inspect  to_s
+locals: _  __  _dir_  _ex_  _file_  _in_  _out_  _pry_
+
+# Show information about in FileUtils
+pry(main)> ls FileUtils
+constants: DryRun  Entry_  LOW_METHODS  LowMethods  METHODS  NoWrite  OPT_TABLE  StreamUtils_  Verbose
+FileUtils.methods:
+  cd       chown           commands        copy_entry   cp_r          install
+  ...(And more methods)
+instance variables: @fileutils_label  @fileutils_output
+
+# Change context to the FileUtils module
+pry(main)> cd FileUtils
+pry(FileUtiles)> show-method rm
+
+From: /Users/jfriesen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/fileutils.rb @ line 562:
+Owner: #<Class:FileUtils>
+Visibility: public
+Number of lines: 10
+
+def rm(list, options = {})
+  fu_check_options options, OPT_TABLE['rm']
+  list = fu_list(list)
+  fu_output_message "rm#{options[:force] ? ' -f' : ''} #{list.join ' '}" if options[:verbose]
+  return if options[:noop]
+
+  list.each do |path|
+    remove_file path, options[:force]
+  end
+end
+```
+
+Great stuff. And `pry-debugger` introduces setting dynamic breakpoints and other such goodies.
+
+## Byebug
+
+@TODO - A Ruby debugger
