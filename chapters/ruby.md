@@ -64,7 +64,7 @@ More on that in the [Rails](/rails#cha-rails) section.
 There have been plenty of times where I've typed the equivalent of `[1,2,3,4] {|i| puts i }` and never seen any output.
 You have been warned.
 
-Then again, it can be helpful to not yield for every block. Or yield multiple times. Its up to the receiver of the block to determine what to do with it.
+Then again, it can be helpful to not yield . Or yield multiple times. Its up to the receiver of the block to determine what to do with it.
 
 Consider the following example:
 

@@ -73,6 +73,15 @@ This section points to tests that document what the system is doing.
 
 And [Travis CI](http://travis-ci.org) asserts the documentation on each commit.
 
+## Writing Tests
+
+Practice writing tests.
+
+If you don't do it, pick something and practice.
+Take a look at the [Bowling Game Kata](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata) or [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life).
+
+If you do it, but only after you have written your production code, then try your next problem by first writing the test you would use to verify the behavior. It is a different way of thinking, but you will
+
 
 [^learning_rails_for_the_first_time]: According to David Heinemeier Hansson, ["Rails itself is a carefully curated collection of APIs and DSLs."](http://david.heinemeierhansson.com/2012/the-parley-letter.html).
 It is an active curation process. And as understanding grows and changes, so to does the system. I've learned Rails 0.x, 1.x, 2.x, 3.x, and 4.x. From 2.x to 3.x it was as though I had to learn Rails again.
