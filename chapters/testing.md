@@ -14,8 +14,11 @@ It was a volitale period in which Rails and its echo system were rapidly evolvin
 So much was changing, and I was working at learning it all, that I didn’t feel I could add "writing tests" to the list of things I could do.
 
 And I learned this was the path of pain.
-Not only was I writing bugs – every developer does this – but the ecosystem was changing from beneath me.
-Everything was in motion and my code was sloshing around, collapsing in on itself.
+I was writing bugs – every developer does this – and the ecosystem was changing from beneath me.
+Everything was in motion.
+
+My code was sloshing around, collapsing in on itself.
+And my dependencies were being updated, mangling what I had done.[^a_commitment_to_semantic_versioning]
 
 It was a nightmare of fragility.
 Had I been writing tests, the nightmare would have been real, but there would have been at least one more thing verifying that what I did yesterday worked today.
@@ -70,3 +73,5 @@ And [Travis CI](http://travis-ci.org) asserts the documentation on each commit.
 
 [^learning_rails_for_the_first_time]: According to David Heinemeier Hansson, ["Rails itself is a carefully curated collection of APIs and DSLs."](http://david.heinemeierhansson.com/2012/the-parley-letter.html).
 It is an active curation process. And as understanding grows and changes, so to does the system. I've learned Rails 0.x, 1.x, 2.x, 3.x, and 4.x. From 2.x to 3.x it was as though I had to learn Rails again.
+
+[^a_commitment_to_semantic_versioning] This was in the day of aparrent arbitrary versioning. [Semantic Versioning](http://semver.org/) may have been the goal, but the reality was a hellish landscape. Please take some time to read up on [Semantic Versioning](http://semver.org/) and commit to abiding by that discipline.
