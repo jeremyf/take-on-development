@@ -45,7 +45,7 @@ Think of isolated tests as testing a single cell. This is where you make sure th
 
 Think of integrated tests as tests that coordinate the interaction of multiple cells. This is where you make sure your organism is operating as expected. *Integrated tests help me write code that is doing the right thing.*
 
-I recommend reading “The Clean Coder: A Code of Conduct for Professional Programmers” by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
+I recommend reading [“The Clean Coder: A Code of Conduct for Professional Programmers”](http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073) by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
 
 ## The Documentation Lies
 
@@ -70,6 +70,7 @@ For recent projects, [Hydramata::Works](https://github.com/ndlib/hydramata-works
 This section points to tests that document what the system is doing.
 
 And [Travis CI](http://travis-ci.org) asserts the documentation on each commit.
+
 
 [^learning_rails_for_the_first_time]: According to David Heinemeier Hansson, ["Rails itself is a carefully curated collection of APIs and DSLs."](http://david.heinemeierhansson.com/2012/the-parley-letter.html).
 It is an active curation process. And as understanding grows and changes, so to does the system. I've learned Rails 0.x, 1.x, 2.x, 3.x, and 4.x. From 2.x to 3.x it was as though I had to learn Rails again.
