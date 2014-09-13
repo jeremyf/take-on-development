@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+cd ~/Repositories/take-on-development/chapters
+wc -w `ls /Users/jfriesen/Repositories/take-on-development/chapters`
