@@ -8,7 +8,7 @@
 
 My first Rails project started December 2005.
 I dove in and began writing the production code.
-I was learning Rails for the first time.
+I was learning Rails for the first time.[^learning_rails_for_the_first_time]
 It was a volitale period in which Rails and its echo system were rapidly evolving.
 
 So much was changing, and I was working at learning it all, that I didn’t feel I could add "writing tests" to the list of things I could do.
@@ -59,7 +59,14 @@ Tests explain how things are working.
 And what the system interactions are.
 
 Write tests that have clear examples of input and output.
+Draw attention to those tests.
+Steer your adopters to those tests.
 Place an effort on making these tests understandable with minimal up front domain knowledge.
 
-For [recent projects](https://github.com/ndlib/hydramata-works), I have made a commitment to grooming a "Getting Your Bearings" section of the README.
+For recent projects, [Hydramata::Works](https://github.com/ndlib/hydramata-works) and its sibling [Hydra Connect Demo](https://github.com/ndlib/hydra_connect_demo), I have made a commitment to grooming a "Getting Your Bearings" section of the README.
 This section points to tests that document what the system is doing.
+
+And [Travis CI](http://travis-ci.org) asserts the documentation on each commit.
+
+[^learning_rails_for_the_first_time]: According to David Heinemeier Hansson, ["Rails itself is a carefully curated collection of APIs and DSLs."](http://david.heinemeierhansson.com/2012/the-parley-letter.html).
+It is an active curation process. And as understanding grows and changes, so to does the system. I've learned Rails 0.x, 1.x, 2.x, 3.x, and 4.x. From 2.x to 3.x it was as though I had to learn Rails again.
