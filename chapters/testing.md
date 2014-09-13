@@ -1,4 +1,5 @@
 # Testing
+\label{cha:testing}
 
 > We write tests first because we find that it helps us write better code.
 > Writing a test first forces us to clarify our intentions, and we don’t start the next piece of work until we have an unambiguous description of what it should do.
@@ -48,6 +49,7 @@ Think of integrated tests as tests that coordinate the interaction of multiple c
 I recommend reading [“The Clean Coder: A Code of Conduct for Professional Programmers”](http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073) by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
 
 ## The Documentation Lies
+\label{sec:the_documentation_lies}
 
 I maintain that the first tattoo I get will be the words "The Documentation Lies."
 I have seen well intentioned efforts to write documentation come up short.
