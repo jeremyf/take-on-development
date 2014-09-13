@@ -18,6 +18,21 @@ I'll add regular expressions, as I was just starting to tinker with them.
 
 ### Instance Method vs. Class Method Annotation
 
+Consider the following class. You want to write about that class in a commit message, email, or IRC.
+
+```ruby
+class MyClass
+  def self.a_method
+    'class method'
+  end
+  def a_method
+    'instance method'
+  end
+end
+```
+
+To write about the class method, use `MyClass.a_method`. To write about the instance method, use `MyClass#a_method`.
+
 ### Blocks
 
 With the rise of Javascript, the idea of blocks is less obtuse.
@@ -41,9 +56,64 @@ end
 
 The above Ruby code will write to STDOUT 1,2,3, and 4; Each separated by a new line.
 
+You can also capture the block, storing it in an instance variable, and later executing that block.
+This is a very powerful tool for configuration management.
+More on that in the [Rails](/rails#cha-rails) section.
+
+**Warning** Every method can take a block. But not every method will yield to the block it received.
+There have been plenty of times where I've typed the equivalent of `[1,2,3,4] {|i| puts i }` and never seen any output.
+You have been warned.
+
+Then again, it can be helpful to not yield for every block. Or yield multiple times. Its up to the receiver of the block to determine what to do with it.
+
+Consider the following example:
+
+```ruby
+request { |response|
+  response.success { send_report }
+  response.failure { retry }
+}
+```
+
+We do not want both `send_report` and `retry` to be executed each time a request is made.
+
 ### Module Mixins
 
+Module Mixins are a powerful tool for object composition.
+But be careful, as you can craft a nightmare object by mixing in so many modules.
+
+Module Mixins trample on encapsulation.
+As I've worked with Ruby I've started associating Module Mixins as an intermediary step in refactoring.
+
+I find common behavior amongst two or more objects.
+I tease apart the common behavior, putting that behavior in a module.
+
+I test the module in isolation.
+Then mix the module back into the associated parent classes.
+
+Often, I will stop there.
+But the decision to stop does not come without cost.
+
+Modules are horrible at encapsulation.
+They can trample on other methods of the containing class.
+And it is difficult to keep the module isolated from other aspects of the containing class.
+
+But they are powerful. And pervasive in the Ruby (on Rails) ecosystem.
+
 ### Method Missing
+
+Ruby exposes a powerful, yet easy to abuse tool: `method_missing`.
+
+If you implement `method_missing` don't forget to:
+
+* implement the corresponding `respond_to_missing?`.
+* capture the method arguements
+* capture any block that might be associated with the call
+
+Failure to account for the above caveats can result in very difficult code to test.
+
+At one point in 2011, I found a nasty [bug in ActiveRecord::Base#method_missing](https://github.com/rails/rails/commit/f2a0dfc2985c008a618e1616f6cf9a4c54098c33).
+I ended up spending several hours tracking it down. Then nursing a monkey patch in our application until my pull request was part of a released version of Rails.
 
 ### Regular Expressions
 
@@ -66,6 +136,8 @@ Hello World
 ```
 
 ### Source Location
+
+This is a helfpul trick:
 
 ```ruby
 obj = Object.new

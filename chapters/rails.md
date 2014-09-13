@@ -1,4 +1,5 @@
 # Rails
+\label{cha:rails}
 
 ## Fundamentals
 
