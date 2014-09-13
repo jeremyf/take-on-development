@@ -41,9 +41,9 @@ There is a lot of discussion regarding tests. At this point, I would recommend t
 
 [Dr. Alan Kay](http://en.wikipedia.org/wiki/Alan_Kay), an author of Smalltalk, coined the term object-oriented. Dr. Kay posited that objects are similar to biological cells that send each other messages.
 
-Think of isolated tests as testing a single cell. This is where you make sure the cell is operating in a well-structured manner. *Isolated tests help me write code the right way.*
+Think of isolated tests as testing a single cell. This is where you make sure the cell is operating in a well-structured manner. *Isolated tests make sure I'm writing code the right way.*
 
-Think of integrated tests as tests that coordinate the interaction of multiple cells. This is where you make sure your organism is operating as expected. *Integrated tests help me write code that is doing the right thing.*
+Think of integrated tests as tests that coordinate the interaction of multiple cells. This is where you make sure your organism is operating as expected. *Integrated tests make sure I'm writing the right thing.*
 
 I recommend reading [“The Clean Coder: A Code of Conduct for Professional Programmers”](http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073) by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
 

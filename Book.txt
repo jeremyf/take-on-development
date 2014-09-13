@@ -14,5 +14,5 @@ rails.md
 testing.md
 modes_of_development.md
 rspec.md
-cucumber.md
+acceptance_testing.md
 miscellany.md
