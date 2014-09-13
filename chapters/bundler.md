@@ -1,4 +1,4 @@
-> Status: @READY_FOR_QA
+> Status: @READY_FOR_EXTERNAL_REVIEW
 
 # Bundler
 
