@@ -1,6 +1,7 @@
 > Status: @READY_FOR_EXTERNAL_REVIEW
 
 # Bundler
+\label{cha:bundler}
 
 > "Bundler maintains a consistent environment for ruby applications.
 > It tracks an application's code and the rubygems it needs to run, so that an application will always have the exact gems (and versions) that it needs to run." *[bundler.io](http://bundler.io/)*
@@ -114,6 +115,9 @@ I rely on git and the focused commit to ensure that I can revert my Gemfile.lock
 This is most evident I update a Gemfile.lock and issues are found a day or so later.
 
 Also consider the more targeted `bundle update <gem_name(s)>`. This command will keep all explicit locks except for the named gem(s). The named gem(s) will be updated along with those gem's dependencies.
+
+## Bundle Gem
+\label{sec:bundle-gem}
 
 <!-- footnotes  -->
 [^gemfile_lock]: If you are working on your own gem, make sure to not checking in your local Gemfile.lock. [More from Yehuda Katz, creator of Bundler can be found at [http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/).

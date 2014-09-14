@@ -98,7 +98,9 @@ Modules are horrible at encapsulation.
 They can trample on other methods of the containing class.
 And it is difficult to keep the module isolated from other aspects of the containing class.
 
-But they are powerful. And pervasive in the Ruby (on Rails) ecosystem.
+But they are powerful.
+And pervasive in the Ruby (on Rails) ecosystem.
+Understand them.
 
 ### Method Missing
 
