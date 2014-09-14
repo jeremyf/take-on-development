@@ -22,6 +22,9 @@ o   Flexible FileLists that act like arrays but know about manipulating file nam
 o   A library of prepackaged tasks to make building rakefiles easier.
 ```
 
+As with any of my tools, I look at the help on occassion.
+Rake has a few switches that are worth noting.
+
 ## rake -W
 
 Invoke rake with the `-W` option to see where each task is defined.
@@ -33,6 +36,9 @@ rake install    ./bundler-1.5.2/lib/bundler/gem_helper.rb:43:in `install'
 rake load_app   ./railties-4.0.3/lib/rails/tasks/engine.rake:1:in `<top (required)>'
 rake release    ./bundler-1.5.2/lib/bundler/gem_helper.rb:48:in `install'
 ```
+
+Knowing about this option can help you understand what the rake tasks you run are doing.
+It can also point you in the direction of how to write Rake tasks.
 
 ## The Rake Field Manual
 
