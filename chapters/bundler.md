@@ -27,6 +27,13 @@ The resulting Gemfile.lock is the evaluated dependency graph *for your machine*.
 
 However, once the Gemfile.lock is created, running `bundle` will install the same things[^gemfile_lock_variances].
 
+Your Gemfile can reference gems that are:
+
+* Up on Rubygems.org
+* Are a particular branch on Github
+* Located on your local file system
+* Or any other gem source that you register
+
 ## Bundle Show
 
 ```console

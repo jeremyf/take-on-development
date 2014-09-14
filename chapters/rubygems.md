@@ -20,5 +20,8 @@ The Gem Guides are a solid place to start.
 
 ## Making Your Own Gems
 
+If you are working on something that could be shared, consider making it a gem.
+In fact, many institutions make gems to share amongst their teams or projects.
+
 I recommend using Bundler's `bundle gem <NAME>` command to create your own gems.
 I go into (more detail about the `bundle gem`)[/bundler#sec-bundle-gem] command in the [Bundler](/bundler) chapter.
