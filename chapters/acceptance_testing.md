@@ -69,24 +69,59 @@ And the documentation can be written such that it is verified by test code.
 
 ## Methodology
 
-For acceptance tests, focus on writing clear examples.
-This means a tight focus on the input parameters, the expected output, and function call that turns input into output.
+For acceptance tests, focus on writing clear examples; A tight focus on:
+
+* the input parameters
+* the expected output
+* the _one_ function call that turns input into output
 
 ## Tools of the Trade
 
 ### Capybara
+
+> Capybara helps you test web applications by simulating how a real user would interact with your app.
+> It is agnostic about the driver running your tests and comes with Rack::Test and Selenium support built in.
+> WebKit is supported through an external gem.
+> -- [https://github.com/jnicklas/capybara](https://github.com/jnicklas/capybara)
 
 This is my goto tool for testing UI features.
 It uses a familiar syntax - ruby code - to express the tests.
 
 If you find yourself in a position with lots of Capybara tests, take some time to craft Page Objects to help keep your Capybara CSS selectors tame. [SitePrism](https://github.com/natritmeyer/site_prism) is a gem that is an implementaiton of a Page Object Model.
 
-If you write capybara tests, you can go so far as to run the tests in a browser.
-Need to show your team what its doing, fire up the test using a Webkit or Firefox driver and let Capybara click through everything; Though you may want to add some sleep timers.
+When you execute Capybara tests, you can switch your driver to show the browser interaction.
+Watch as Capybara fills out form fields, clicks buttons, and asserts an expectation.
+Now imagine doing that as part of your demo; You may need to add some sleep/pause logic.
 
 ### Cucumber
 
-Is it worth the effort?
+> Cucumber is a tool for running automated tests written in plain language.
+> Because they're written in plain language, they can be read by anyone on your team.
+> Because they can be read by anyone, you can use them to help improve communication, collaboration and trust on your team.
+> -- [https://github.com/cucumber/cucumber/](https://github.com/cucumber/cucumber/)
+
+Read the quote again. Ask yourself?
+
+* Who will be writing the plain language?
+* Who will be writing the code that assert the plain language?
+
+In my experience, Cucumber requires a precision in writing that creates a lot of overhead.
+
+Writing Cucumber specs requires a commitment from the team.
+
+* Who will be reading these tests?
+* Who will be helping craft the scenarios?
+* Will team members take the time to read these things?
+
+Using Cucumber can be a powerful tool of collaboration, but all collaboration comes with a time cost.
+Make sure it is worth it.
+
+Ask your team:
+
+* What kind of documentation they want to see?
+* Who the documentation is for?
+
+Get a sense of the audience for the tests, because you will want to craft your examples to reflect their needs.
 
 ### Fitnesse
 
