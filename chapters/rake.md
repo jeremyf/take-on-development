@@ -22,12 +22,12 @@ o   Flexible FileLists that act like arrays but know about manipulating file nam
 o   A library of prepackaged tasks to make building rakefiles easier.
 ```
 
-## rake -w
+## rake -W
 
-Invoke rake with the `-w` option to see where each task is defined.
+Invoke rake with the `-W` option to see where each task is defined.
 
 ```console
-$ rake -w
+$ rake -W
 
 rake install    ./bundler-1.5.2/lib/bundler/gem_helper.rb:43:in `install'
 rake load_app   ./railties-4.0.3/lib/rails/tasks/engine.rake:1:in `<top (required)>'
