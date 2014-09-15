@@ -82,6 +82,15 @@ Take a look at the [Bowling Game Kata](http://butunclebob.com/ArticleS.UncleBob.
 
 If you do it, but only after you have written your production code, then try your next problem by first writing the test you would use to verify the behavior. It is a different way of thinking, but you will
 
+## Travis
+
+> Travis CI is a hosted continuous integration service.
+> It is integrated with GitHub and offers first class support for:
+> C, C++, Clojure, Erlang, Go, Groovy, Haskell, Java, JavaScript (with Node.js), Objective-C, Perl, PHP, Python, Ruby, and Scala
+> -- http://docs.travis-ci.com/user/getting-started/
+
+If you are writing open source software, please make use of [Travis-CI.org](https://travis-ci.org/).
+Its free for open-source projects.
 
 [^learning_rails_for_the_first_time]: According to David Heinemeier Hansson, ["Rails itself is a carefully curated collection of APIs and DSLs."](http://david.heinemeierhansson.com/2012/the-parley-letter.html).
 It is an active curation process. And as understanding grows and changes, so to does the system. I've learned Rails 0.x, 1.x, 2.x, 3.x, and 4.x. From 2.x to 3.x it was as though I had to learn Rails again.

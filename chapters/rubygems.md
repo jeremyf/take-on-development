@@ -12,11 +12,11 @@ The Gem Guides are a solid place to start.
 
 ## Ruby-Toolbox.com
 
-@TODO
+This is a goto resource for vetting gems.
 
 ## Gemnasium.com
 
-@TODO
+Keep tabs on what gems are out of date.
 
 ## Making Your Own Gems
 
