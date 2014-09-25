@@ -35,6 +35,20 @@ Static Pages vs. Application Processed vs. Forwarded
 >
 > -- Martin, Robert C. "Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series)"
 
+Traditionally, Rails pushed ActiveRecord objects towards Fat Models.
+I blame [Fat Models, Skinny Controllers](http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model).
+But I am not without blame.
+I jumped on the Fat Models train.
+
+I remember early in Rails development having MVC related arguements about where things should go.
+My coworker said "In the controller" and I said "In the model."
+
+It turns out we were both wrong.
+But we didn't have a noun to attach the behavior to.
+We were talking about a Query object; Something that finds the objects that we need.
+In other cases we needed a Command object; Something that transforms an object.
+
+### Single Responsibility Principle
 
 If your class inherits from another, you are signing a contract stating that when the ancestor changes, your class will also change.
 In other words, your object, begins life with with one reason for changing.
