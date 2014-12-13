@@ -12,7 +12,7 @@ The Gem Guides are a solid place to start.
 
 ## Ruby-Toolbox.com
 
-This is a goto resource for vetting gems.
+This is a goto resource for vetting gems. For a given category what are the usage and maintenance stats for those gems?
 
 ## Gemnasium.com
 

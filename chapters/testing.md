@@ -10,21 +10,22 @@
 My first Rails project started December 2005.
 I dove in and began writing the production code.
 I was learning Rails for the first time.[^learning_rails_for_the_first_time]
-It was a volitale period in which Rails and its echo system were rapidly evolving.
+It was a volitale period in which Rails and its ecosystem were rapidly evolving.
 
-So much was changing, and I was working at learning it all, that I didn’t feel I could add "writing tests" to the list of things I could do.
+So much was changing, and I was working at learning it all. I didn’t feel I could add "writing tests" to the list of things I could do.
 
 And I learned this was the path of pain.
 I was writing bugs – every developer does this – and the ecosystem was changing from beneath me.
 Everything was in motion.
 
 My code was sloshing around, collapsing in on itself.
-And my dependencies were being updated, mangling what I had done.[^a_commitment_to_semantic_versioning]
+And my dependencies were changing, mangling what I had done.[^a_commitment_to_semantic_versioning]
 
 It was a nightmare of fragility.
-Had I been writing tests, the nightmare would have been real, but there would have been at least one more thing verifying that what I did yesterday worked today.
+Had I been writing tests, the nightmare would have been real, but there would have been at least one more thing helping me check up on the work I did the day before.
 
 Today, I write tests.
+
 When I am thinking about a solution, I also ask myself "How will I go about verifying the solution?"
 I capture the answer to the form in my "production" code and the latter in my "test" code.
 Both are important.
@@ -61,14 +62,14 @@ Or does not reflect the current and changing reality.
 
 Part of the cure for lying documentation is to write tests.
 Tests explain how things are working.
-And what the system interactions are.
+They consume the low-level API of your application.
 
-Write tests that have clear examples of input and output.
+So, write tests that have clear examples of input and output.
 Draw attention to those tests.
 Steer your adopters to those tests.
 Place an effort on making these tests understandable with minimal up front domain knowledge.
 
-For recent projects, [Hydramata::Works](https://github.com/ndlib/hydramata-works) and its sibling [Hydra Connect Demo](https://github.com/ndlib/hydra_connect_demo), I have made a commitment to grooming a "Getting Your Bearings" section of the README.
+For recent projects, [Sipity](https://github.com/ndlib/sipity) [Hydramata::Works](https://github.com/ndlib/hydramata-works) and its sibling [Hydra Connect Demo](https://github.com/ndlib/hydra_connect_demo), I have made a commitment to grooming a "Getting Your Bearings" section of the README.
 This section points to tests that document what the system is doing.
 
 And [Travis CI](http://travis-ci.org) asserts the documentation on each commit.
@@ -80,7 +81,8 @@ Practice writing tests.
 If you don't do it, pick something and practice.
 Take a look at the [Bowling Game Kata](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata) or [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life).
 
-If you do it, but only after you have written your production code, then try your next problem by first writing the test you would use to verify the behavior. It is a different way of thinking, but you will
+If you write tests, but only after you have written your production code, then try your next problem by first writing the test you would use to verify the behavior.
+It is a different way of thinking, but it is helpful to consider the numerous collaborators.
 
 ## Travis
 
@@ -91,6 +93,10 @@ If you do it, but only after you have written your production code, then try you
 
 If you are writing open source software, please make use of [Travis-CI.org](https://travis-ci.org/).
 Its free for open-source projects.
+
+## Code Coverage
+
+Software often times makes use of indirection.
 
 [^learning_rails_for_the_first_time]: According to David Heinemeier Hansson, ["Rails itself is a carefully curated collection of APIs and DSLs."](http://david.heinemeierhansson.com/2012/the-parley-letter.html).
 It is an active curation process. And as understanding grows and changes, so to does the system. I've learned Rails 0.x, 1.x, 2.x, 3.x, and 4.x. From 2.x to 3.x it was as though I had to learn Rails again.
