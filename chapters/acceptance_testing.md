@@ -1,7 +1,7 @@
 # Acceptance Testing
 
 I have maintained that a software developer is analogous to an author.
-And the production application is the book.
+And my production application is the book I am writing.
 Few people would consider publishing a book without first having an editor.
 
 In 2014, I began working with my first editor.
@@ -13,7 +13,7 @@ And I am thankful for his dedication to the task.
 
 He helps me drag features across the "mostly done" line and into the coveted "done done" area.
 He bring closure to a task.
-Ensuring that the nuances of a feature of fleshed out and not a half-baked solution.
+Ensuring that the nuances of a feature is fleshed out and not a half-baked solution.
 
 We have had several discussions about our acceptance test tooling.
 What follows is our attempt to distill those conversations.
@@ -124,6 +124,10 @@ Ask your team:
 Get a sense of the audience for the tests, because you will want to craft your examples to reflect their needs.
 
 ### Fitnesse
+
+As of this writing, I have yet to make use of [Fitnesse](http://www.fitnesse.org/).
+
+It looks to be useful in growing both documentatino and public facing assertions that things are working.
 
 [^why_rspec]: I contribute to ProjectHydra, and prior to my participation, it was agreed that ProjectHydra would use RSpec. It can be very powerful for writing expressive tests, with a focus on "natural" language. But in its accomodation for natural language, RSpec provides many different ways of saying the same thing. In other words, it can be very confusing to get started.
 

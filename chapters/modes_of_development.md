@@ -95,6 +95,8 @@ As a mid-level developer many of them may be applicable.
 
 ## Modes that I can think of
 
+What follows is an inventory of the modes of thinking in which I find myself.
+
 ### Meeting Mode
 
 * **Goal:** Capture group decisions, action items, keep things moving.
