@@ -9,6 +9,8 @@ or give a donation to the [American Civil Liberties Union](https://www.aclu.org/
 I warn you, this work is not complete, but I hope there is useful information even in its gestational state.
 This is something I feel needs to get out and into the open.
 
+Want to help me make this better? Submit a pull request.
+
 # Preface
 
 Since early in my professional programming career, I have often worked alone.

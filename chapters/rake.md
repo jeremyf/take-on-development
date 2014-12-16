@@ -1,5 +1,3 @@
-> Status: @READY_FOR_QA
-
 # Rake
 
 One of the late [Jim Weirich](http://en.wikipedia.org/wiki/Jim_Weirich)'s pervasive contributions to the Ruby community.

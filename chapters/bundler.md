@@ -1,5 +1,3 @@
-> Status: @READY_FOR_EXTERNAL_REVIEW
-
 # Bundler
 \label{cha:bundler}
 

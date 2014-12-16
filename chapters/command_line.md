@@ -1,5 +1,3 @@
-> Status: @READY_FOR_QA
-
 # Command Line
 \label{cha:command_line}
 
