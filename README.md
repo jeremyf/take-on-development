@@ -12,6 +12,8 @@ You can download the eBooks from one of the following links:
 
 This work has been a labor of love. I write it in my spare time.
 
+I also write [developer/development related blog posts](http://ndlib.github.io) for my day job.
+
 If you are feeling generous please consider throwing a tip my way via Paypal to jeremy.n.friesen@gmail.com
 or give a donation to the [American Civil Liberties Union](https://www.aclu.org/) or [Wikipedia](https://donate.wikimedia.org/w/index.php?title=Special:FundraiserLandingPage&country=US).
 
